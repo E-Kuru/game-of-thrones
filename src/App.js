@@ -37,21 +37,18 @@ class App extends React.Component {
 
   calculateWater = () => {
     if(this.state.temperature >= 20){
-      let temp = this.state.temperature - 19
       this.setState({
-        water : this.state.water += (temp * 0.02),
+        water : this.state.water += 0.02,
       })
     }
     else if(this.state.heart > 120){
-      let heart = this.state.heart - 119
       this.setState({
-        water : this.state.water += (heart * 0.0008),
+        water : this.state.water += 0.0008,
       })
     }
     else if(this.state.steps > 10000){
-      let steps = this.state.steps - 9999
       this.setState({
-        water : this.state.water += (steps * 0.00002),
+        water : this.state.water += 0.00002,
       })
     }
   }
@@ -65,6 +62,7 @@ class App extends React.Component {
     const heartMax = 180
     const stepsMin = 0
     const stepsMax = 50000
+    
     return (
       <div className="container-fluid">
         <div className="row">

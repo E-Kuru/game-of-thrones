@@ -13,7 +13,7 @@ class Box extends React.Component {
           {icon}
         </span>
         <p>{value}{unit}</p>
-          {icon !== 'local_drink' ? <input type={type} onChange={change} min={min} max={max}/> : ''}
+          {icon !== 'local_drink' ? <input type={type} value={value} onChange={change} min={min} max={max}/> : ''}
       </div>
     )
   }

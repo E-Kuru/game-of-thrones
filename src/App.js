@@ -62,7 +62,7 @@ class App extends React.Component {
     const heartMax = 180
     const stepsMin = 0
     const stepsMax = 50000
-    
+
     return (
       <div className="container-fluid">
         <div className="row">
@@ -77,9 +77,9 @@ class App extends React.Component {
           <Box
             icon="directions_walk"
             color="black"
-            value={this.state.steps}
             unit="steps"
             type='range'
+            value={this.state.steps}
             min={stepsMin} 
             max={stepsMax}
             change={this.onStepsChange}/>
@@ -88,9 +88,9 @@ class App extends React.Component {
           <Box 
             icon="favorite"
             color="red"
-            value={this.state.heart}
             unit="bpm"
             type='range'
+            value={this.state.heart}
             min={heartMin}
             max={heartMax}
             change={this.onHeartChange}/>
@@ -99,8 +99,8 @@ class App extends React.Component {
           <Box
             icon="wb_sunny"
             color="yellow"
-            value={this.state.temperature}
             unit="°C" type='range'
+            value={this.state.temperature}
             min={tempMin}
             max={tempMax}
             change={this.onTempChange}/>

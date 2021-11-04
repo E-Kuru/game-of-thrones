@@ -25,13 +25,13 @@ class App extends React.Component {
 		return(
       <>
 			<h1>Game of thrones</h1>
-      {this.state.characters.map(e => (
-        <div className="container mt-5 col-12">
-            <div className='d-flex flex-wrap col-12 justify-content-center'>
+      <div className="container mt-5 col-12">
+            <div className='d-flex flex-wrap justify-content-center'>
+              {this.state.characters.map(e => (
                 <Characters name={e.fullName} title={e.title} img={e.imageUrl}/>
+                ))}
             </div>    
-        </div>    
-      ))}
+      </div>    
       </>
 		)
 	}

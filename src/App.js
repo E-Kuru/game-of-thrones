@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       characters : []
     }
+    this.handleFavorite = this.handleFavorite.bind(this)
   }
 
   componentDidMount (){
@@ -20,6 +21,10 @@ class App extends React.Component {
     })
   }
 
+  handleFavorite (){
+
+  }
+
 	render() {
     console.log(this.state.characters);
 		return(
@@ -28,7 +33,7 @@ class App extends React.Component {
       <div className="container mt-5 col-12">
             <div className='d-flex flex-wrap justify-content-center'>
               {this.state.characters.map(e => (
-                <Characters name={e.fullName} title={e.title} img={e.imageUrl}/>
+                <Characters name={e.fullName} title={e.title} img={e.imageUrl} favorite={this.handleFavorite}/>
                 ))}
             </div>    
       </div>    
